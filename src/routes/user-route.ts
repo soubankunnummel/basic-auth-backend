@@ -7,4 +7,5 @@ const userRouter = Router();
 
 userRouter.get('/profile',protectRoute, profileController.getProfile);
 
+
 export default userRouter;

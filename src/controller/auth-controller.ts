@@ -76,6 +76,11 @@ export default class AuthController {
             return res.status(400).json({ error: error.message });
         }
     }
+
+    async logout(req: Request | any, res: Response | any) {
+        res.clearCookie("token");
+        return res.status(200).json({ message: "logout success" });
+    }
 }
 
 export const authController = new AuthController();
